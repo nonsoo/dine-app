@@ -151,10 +151,37 @@
   color: var(--col-text-sec);
 }
 
+.orderingSection {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../public/imgs/jeru-mayfair_26112021125425.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  width: 100%;
+
+  margin-top: 3em;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2em;
+  padding: 5em;
+}
+
+.orderText {
+  color: var(--col-text-tri);
+  font-weight: var(--fw-tri);
+  font-size: var(--fs-tri);
+  text-align: center;
+}
+
+.order_Btn {
+  background-color: initial;
+}
 .footer {
   background-color: var(--col-background-sec);
-  padding: 1.25em;
-  margin-top: 3em;
+  padding: 2em;
 
   display: flex;
   flex-direction: column;
@@ -236,6 +263,7 @@
     display: none;
   }
 
+  .orderingSection,
   .footer {
     flex-direction: row;
   }

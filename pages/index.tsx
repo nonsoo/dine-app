@@ -128,7 +128,7 @@ const Home: NextPage = () => {
 
         <section className={styles.orderingSection}>
           <p className={styles.orderText}>Ready to make a reservation?</p>
-          <Btn btnName="book table" exCSS={styles.order_Btn} />
+          <Btn btnName="book a table" exCSS={styles.order_Btn} />
         </section>
       </main>
 
