@@ -49,7 +49,11 @@
   }
 
   .midSection:first-child {
-    margin-bottom: 10rem;
+    margin-bottom: 2rem;
+  }
+
+  .midSection:last-child > .ImgCon {
+    translate: 0px 120px;
   }
 
   .midSection__Text__SubHeader {

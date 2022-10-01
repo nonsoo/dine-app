@@ -62,6 +62,7 @@
   justify-content: center;
   align-items: center;
   gap: 3em;
+  padding-top: 5em;
 }
 
 .highlight_Text {
@@ -261,7 +262,8 @@
   }
 
   .gathering_Options_optionText:first-child::after {
-    display: none;
+    text-align: left;
+    margin: 0;
   }
 
   .orderingSection,
