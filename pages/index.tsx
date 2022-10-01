@@ -9,6 +9,8 @@ import Btn from "../Components/btn";
 
 import MidSection from "../Components/midSection";
 
+import SampleHighlight from "../Components/highlightSection/sampleHighlight";
+
 const info = {
   subHeader: "Enjoyable place for all the family",
   description: `Our relaxed surroundings make dining with us a great experience for
@@ -19,6 +21,13 @@ const info = {
 const info2 = {
   subHeader: "The most locally sourced food",
   description: `All ingredients come directly from our farm or local fishery. So you can be sure that you're eating the freshest, most sustainable food.`,
+  imgTitle: farmImg,
+};
+
+const sampleHighlight1 = {
+  headerTitle: "seared salmon filet",
+  description:
+    "our locally sourced salmon served with a refreshing buckwheat summer salad.",
   imgTitle: farmImg,
 };
 
@@ -57,6 +66,35 @@ const Home: NextPage = () => {
             imgTitle={info2.imgTitle}
             switched={true}
           />
+        </section>
+
+        <section className={styles.highlightSection}>
+          <div className={styles.highlight_Text}>
+            <p className={styles.highlight_Text_subHeader}>
+              A few highlights from our menu
+            </p>
+            <p className={styles.highlight_Text_Description}>
+              We cater for all dietary requirements. but heres a glimpse at some
+              of our diner favourites. Our menu is revamped every season.
+            </p>
+          </div>
+          <div className={styles.highlight_SampleDish}>
+            <SampleHighlight
+              headerTitle={sampleHighlight1.headerTitle}
+              description={sampleHighlight1.description}
+              imgTitle={sampleHighlight1.imgTitle}
+            />
+            <SampleHighlight
+              headerTitle={sampleHighlight1.headerTitle}
+              description={sampleHighlight1.description}
+              imgTitle={sampleHighlight1.imgTitle}
+            />
+            <SampleHighlight
+              headerTitle={sampleHighlight1.headerTitle}
+              description={sampleHighlight1.description}
+              imgTitle={sampleHighlight1.imgTitle}
+            />
+          </div>
         </section>
       </main>
     </>

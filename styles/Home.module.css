@@ -37,6 +37,12 @@
   margin-top: 1.75em;
 }
 
+.midSection,
+.highlightSection {
+  padding: 1.5em;
+  /* margin: 0 auto; */
+}
+
 .midSection {
   display: flex;
   flex-direction: column;
@@ -44,6 +50,40 @@
   align-items: center;
 }
 
+.highlightSection {
+  background-color: var(--col-background-sec);
+  width: 100vw;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3em;
+}
+
+.highlight_Text {
+  color: var(--col-text-tri);
+}
+
+.highlight_Text_subHeader {
+  font-size: var(--fs-tri);
+  font-weight: var(--fw-tri);
+  text-align: center;
+}
+
+.highlight_Text_subHeader::before {
+  content: "O ------------";
+  font-size: 0.65rem;
+  display: block;
+  margin-bottom: 2em;
+
+  color: var(--col-acc-sec);
+}
+
+.highlight_Text_Description {
+  color: var(--col-text-sec);
+  text-align: center;
+}
 @media screen and (min-width: 50rem) {
   .header {
     min-height: 0vh;
@@ -55,5 +95,15 @@
 
   .header_text {
     text-align: left;
+  }
+
+  .highlightSection {
+    flex-direction: row;
+  }
+
+  .highlight_Text_subHeader,
+  .highlight_Text_Description {
+    text-align: left;
+    width: 50%;
   }
 }

@@ -1,6 +1,6 @@
 .btn {
   border: none;
-  border: 2px solid var(--col-background-prmy);
+  outline: 2px solid var(--col-background-prmy);
 
   background-color: var(--col-background-sec);
   color: var(--col-text-tri);

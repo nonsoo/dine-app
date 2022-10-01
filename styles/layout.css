@@ -49,6 +49,8 @@ select {
 
   /* box Shadows */
   --box-shadow: 18px 14px 33px -7px rgba(0, 0, 0, 0.07);
+
+  --border-acc-col: hsla(210, 13%, 94%, 0.4);
 }
 
 body {
@@ -68,8 +70,8 @@ body {
 
 .mainC {
   max-width: 1440px;
-  padding: 1.5em;
-  margin: 0 auto;
+  display: grid;
+  place-items: center;
 }
 
 @media screen and (min-width: 50rem) {

@@ -1,0 +1,59 @@
+.sampleHighlight {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  gap: 2.5em;
+
+  border-bottom: 1px solid var(--border-acc-col);
+  padding: 1.3em;
+}
+
+.sampleHighlight:last-child {
+  border: 0;
+}
+
+.ImgCon {
+  width: 80%;
+}
+
+.sampleHighlight_Text {
+  color: var(--col-text-tri);
+  text-align: center;
+}
+
+.sampleHighlight_Text_Header {
+  text-transform: capitalize;
+  font-weight: var(--fw-sec);
+}
+
+.sampleHighlight_Text_Description {
+  color: var(--col-text-sec);
+}
+
+@media screen and (min-width: 50rem) {
+  .sampleHighlight {
+    flex-direction: row;
+
+    align-items: flex-start;
+  }
+
+  .sampleHighlight_Text {
+    text-align: left;
+  }
+
+  .ImgCon {
+    position: relative;
+    z-index: 1;
+  }
+
+  .ImgCon::after {
+    content: "________";
+    color: var(--col-acc-sec);
+
+    position: absolute;
+    top: 0px;
+    left: 210px;
+    z-index: -1;
+  }
+}
