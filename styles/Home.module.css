@@ -38,7 +38,8 @@
 }
 
 .midSection,
-.highlightSection {
+.highlightSection,
+.gatheringSection {
   padding: 1.5em;
   /* margin: 0 auto; */
 }
@@ -86,6 +87,70 @@
   color: var(--col-text-sec);
   text-align: center;
 }
+
+.gatheringSection {
+  display: grid;
+  grid-template-columns: minmax(200px, 1fr);
+  grid-auto-rows: minmax(200px, 1fr);
+  grid-auto-flow: dense;
+
+  gap: 1.5em;
+
+  max-width: 1440px;
+
+  margin-top: 3em;
+}
+
+.gathering_ImgCon {
+  width: 100%;
+  position: relative;
+}
+
+.gathering_Options {
+  grid-row: 2/3;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.gathering_Options_optionText {
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: var(--fw-tri);
+  color: var(--col-text-sec);
+}
+
+.gathering_Options_optionText:first-child {
+  font-size: var(--fs-sec);
+  color: var(--col-text-prmy);
+}
+
+.gathering_Options_optionText:first-child::after {
+  content: "";
+  display: block;
+  border: 1px solid var(--col-acc-sec);
+  width: 20%;
+  margin: 0 auto;
+}
+
+.gathering_Text {
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.25em;
+}
+
+.gathering_Text_Header {
+  font-weight: var(--fw-tri);
+  font-size: var(--fs-four);
+}
+
+.gathering_Text_Description {
+  color: var(--col-text-sec);
+}
+
 @media screen and (min-width: 50rem) {
   .header {
     min-height: 0vh;
@@ -107,5 +172,42 @@
   .highlight_Text_Description {
     text-align: left;
     width: 50%;
+  }
+
+  .gatheringSection {
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: minmax(200px, 1fr);
+    gap: 3em;
+  }
+
+  .gathering_ImgCon {
+    grid-column: 1/2;
+    grid-row: 1 / span 2;
+  }
+
+  .gathering_Text {
+    text-align: left;
+  }
+
+  .gathering_Text_Description {
+    width: 60%;
+  }
+
+  .gathering_Text_btn {
+    align-self: flex-start;
+  }
+
+  .gathering_Options_optionText {
+    text-align: left;
+  }
+
+  .gathering_Options_optionText:first-child::after {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 60rem) {
+  .gathering_Text_Description {
+    width: 100%;
   }
 }

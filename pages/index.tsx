@@ -1,8 +1,10 @@
 import type { NextPage } from "next";
+import Image from "next/image";
 
 import styles from "../styles/Home.module.css";
 
 import farmImg from "../public/imgs/farm.jpg";
+import GatheringImg from "../public/imgs/gathering.jpg";
 
 import HeadMeta from "../Components/HeadComp/HeadMeta";
 import Btn from "../Components/btn";
@@ -97,7 +99,32 @@ const Home: NextPage = () => {
           </div>
         </section>
 
-        <section className={styles.gatheringSection}></section>
+        <section className={styles.gatheringSection}>
+          <div className={styles.gathering_ImgCon}>
+            <Image
+              src={GatheringImg}
+              alt="FarmImg"
+              layout="fill"
+              objectFit="cover"
+            />
+          </div>
+          <div className={styles.gathering_Text}>
+            <p className={styles.gathering_Text_Header}>Family Gathering</p>
+            <p className={styles.gathering_Text_Description}>
+              We love catering for entire families. So please bring everyone
+              along for a special meal with your loved ones. We will provide a
+              memorable experience for all.
+            </p>
+            <Btn btnName="book table" exCSS={styles.gathering_Text_btn} />
+          </div>
+          <div className={styles.gathering_Options}>
+            <p className={styles.gathering_Options_optionText}>
+              Family Gathering
+            </p>
+            <p className={styles.gathering_Options_optionText}>Special Event</p>
+            <p className={styles.gathering_Options_optionText}>Social Event</p>
+          </div>
+        </section>
       </main>
     </>
   );
