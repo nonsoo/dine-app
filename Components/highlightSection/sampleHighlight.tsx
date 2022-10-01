@@ -12,7 +12,7 @@ const sampleHighlight: FC<Props> = ({ headerTitle, description, imgTitle }) => {
   return (
     <div className={styles.sampleHighlight}>
       <div className={styles.ImgCon}>
-        <Image src={imgTitle} alt="FarmImg" layout="responsive" />
+        <Image src={imgTitle} alt="FarmImg" layout="fill" objectFit="cover" />
       </div>
       <div className={styles.sampleHighlight_Text}>
         <p className={styles.sampleHighlight_Text_Header}>{headerTitle}</p>

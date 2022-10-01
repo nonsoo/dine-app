@@ -1,7 +1,10 @@
 .midSection {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 2em;
+
+  translate: 0px -60px;
 }
 
 .midSection:first-child {
@@ -32,11 +35,16 @@
 .ImgCon {
   width: 100%;
   position: relative;
+  aspect-ratio: 1 / 2;
+
+  max-height: 600px;
 }
 
 @media screen and (min-width: 50rem) {
   .midSection {
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
     width: 50%;
   }
 
@@ -59,5 +67,9 @@
 
   .switched {
     order: 1;
+  }
+
+  .ImgCon {
+    width: 50%;
   }
 }

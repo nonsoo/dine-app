@@ -19,7 +19,7 @@ const midSection: FC<Props> = ({
   return (
     <div className={styles.midSection}>
       <div className={`${styles.ImgCon} ${switched ? styles.switched : ""}`}>
-        <Image src={imgTitle} alt="FarmImg" layout="responsive" />
+        <Image src={imgTitle} alt="FarmImg" layout="fill" objectFit="cover" />
       </div>
 
       <div className={styles.midSection__Text}>

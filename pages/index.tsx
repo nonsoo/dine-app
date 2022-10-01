@@ -96,6 +96,8 @@ const Home: NextPage = () => {
             />
           </div>
         </section>
+
+        <section className={styles.gatheringSection}></section>
       </main>
     </>
   );
