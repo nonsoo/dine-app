@@ -153,7 +153,7 @@
 
 .orderingSection {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(../public/imgs/jeru-mayfair_26112021125425.jpg);
+    url(../public/imgs/reservation.webp);
   background-repeat: no-repeat;
   background-size: cover;
 
@@ -177,7 +177,7 @@
 }
 
 .order_Btn {
-  background-color: initial;
+  background: initial !important;
 }
 .footer {
   background-color: var(--col-background-sec);
@@ -214,12 +214,13 @@
     min-height: 0vh;
   }
 
-  .header_title {
+  .header_title,
+  .header_text {
     text-align: left;
   }
 
   .header_text {
-    text-align: left;
+    align-items: flex-start;
   }
 
   .highlightSection {

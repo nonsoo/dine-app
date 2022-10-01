@@ -3,8 +3,12 @@ import Image from "next/image";
 
 import styles from "../styles/Home.module.css";
 
-import farmImg from "../public/imgs/farm.jpg";
-import GatheringImg from "../public/imgs/gathering.jpg";
+import farmImg from "../public/imgs/farm.webp";
+import GatheringImg from "../public/imgs/gathering.webp";
+import FoodPrep from "../public/imgs/foodPrep.webp";
+import Salmon from "../public/imgs/salmon.webp";
+import Mignon from "../public/imgs/mignon.webp";
+import Mousse from "../public/imgs/mousse.webp";
 
 import HeadMeta from "../Components/HeadComp/HeadMeta";
 import Btn from "../Components/btn";
@@ -13,25 +17,47 @@ import MidSection from "../Components/midSection";
 
 import SampleHighlight from "../Components/highlightSection/sampleHighlight";
 
-const info = {
-  subHeader: "Enjoyable place for all the family",
-  description: `Our relaxed surroundings make dining with us a great experience for
+const info = [
+  {
+    id: 1,
+    subHeader: "Enjoyable place for all the family",
+    description: `Our relaxed surroundings make dining with us a great experience for
           everyone. We can even arrange a tour of the farm before your meal.`,
-  imgTitle: farmImg,
-};
+    imgTitle: farmImg,
+    switched: false,
+  },
+  {
+    id: 2,
+    subHeader: "The most locally sourced food",
+    description: `All ingredients come directly from our farm or local fishery. So you can be sure that you're eating the freshest, most sustainable food.`,
+    imgTitle: FoodPrep,
+    switched: true,
+  },
+];
 
-const info2 = {
-  subHeader: "The most locally sourced food",
-  description: `All ingredients come directly from our farm or local fishery. So you can be sure that you're eating the freshest, most sustainable food.`,
-  imgTitle: farmImg,
-};
-
-const sampleHighlight1 = {
-  headerTitle: "seared salmon filet",
-  description:
-    "our locally sourced salmon served with a refreshing buckwheat summer salad.",
-  imgTitle: farmImg,
-};
+const sampleHighlightInfo = [
+  {
+    id: 1,
+    headerTitle: "seared salmon filet",
+    description:
+      "our locally sourced salmon served with a refreshing buckwheat summer salad.",
+    imgTitle: Salmon,
+  },
+  {
+    id: 2,
+    headerTitle: "Rosemary Filet Miganon",
+    description:
+      "Our prime beef served to your tase with a delicious choice of seasonal sides.",
+    imgTitle: Mignon,
+  },
+  {
+    id: 3,
+    headerTitle: "Summer Fruit Chocolate Mousse",
+    description:
+      "Creamy mousse combined with summer fruits and dark chocolate shavings.",
+    imgTitle: Mousse,
+  },
+];
 
 const Home: NextPage = () => {
   return (
@@ -39,35 +65,34 @@ const Home: NextPage = () => {
       <HeadMeta title="Dine" description="This is the dine app home page" />
 
       <header className={styles.header}>
-        <p className={styles.header_title}>dine</p>
+        <div className={styles.wrapper}>
+          <p className={styles.header_title}>dine</p>
 
-        <section className={styles.header_text}>
-          <p className={styles.header_text_subTitle}>
-            Exquisite dining <br />
-            since 1989
-          </p>
-          <p className={styles.header_text_description}>
-            Experience our seasonal menu in beautiful country surroundings. Eat
-            the freshest produce from the comfort of our farmhouse.
-          </p>
-          <Btn btnName="Book a Table" exCSS={styles.headerBtn} />
-        </section>
+          <section className={styles.header_text}>
+            <p className={styles.header_text_subTitle}>
+              Exquisite dining <br />
+              since 1989
+            </p>
+            <p className={styles.header_text_description}>
+              Experience our seasonal menu in beautiful country surroundings.
+              Eat the freshest produce from the comfort of our farmhouse.
+            </p>
+            <Btn btnName="Book a Table" exCSS={styles.headerBtn} />
+          </section>
+        </div>
       </header>
 
       <main className="mainC">
         <section className={styles.midSection}>
-          <MidSection
-            subHeader={info.subHeader}
-            description={info.description}
-            imgTitle={info.imgTitle}
-            switched={false}
-          />
-          <MidSection
-            subHeader={info2.subHeader}
-            description={info2.description}
-            imgTitle={info2.imgTitle}
-            switched={true}
-          />
+          {info.map((section) => (
+            <MidSection
+              key={section.id}
+              subHeader={section.subHeader}
+              description={section.description}
+              imgTitle={section.imgTitle}
+              switched={section.switched}
+            />
+          ))}
         </section>
 
         <section className={styles.highlightSection}>
@@ -81,21 +106,14 @@ const Home: NextPage = () => {
             </p>
           </div>
           <div className={styles.highlight_SampleDish}>
-            <SampleHighlight
-              headerTitle={sampleHighlight1.headerTitle}
-              description={sampleHighlight1.description}
-              imgTitle={sampleHighlight1.imgTitle}
-            />
-            <SampleHighlight
-              headerTitle={sampleHighlight1.headerTitle}
-              description={sampleHighlight1.description}
-              imgTitle={sampleHighlight1.imgTitle}
-            />
-            <SampleHighlight
-              headerTitle={sampleHighlight1.headerTitle}
-              description={sampleHighlight1.description}
-              imgTitle={sampleHighlight1.imgTitle}
-            />
+            {sampleHighlightInfo.map((highlight) => (
+              <SampleHighlight
+                key={highlight.id}
+                headerTitle={highlight.headerTitle}
+                description={highlight.description}
+                imgTitle={highlight.imgTitle}
+              />
+            ))}
           </div>
         </section>
 
