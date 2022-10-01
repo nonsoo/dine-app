@@ -151,6 +151,37 @@
   color: var(--col-text-sec);
 }
 
+.footer {
+  background-color: var(--col-background-sec);
+  padding: 1.25em;
+  margin-top: 3em;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2.5em;
+
+  color: var(--col-text-tri);
+}
+
+.footer_Title {
+  font-weight: var(--fw-tri);
+  font-size: var(--fs-four);
+  color: var(--col-text-tri);
+  text-align: center;
+}
+
+.footer_Location,
+.footer_Time {
+  text-transform: uppercase;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.55em;
+}
+
 @media screen and (min-width: 50rem) {
   .header {
     min-height: 0vh;
@@ -203,6 +234,15 @@
 
   .gathering_Options_optionText:first-child::after {
     display: none;
+  }
+
+  .footer {
+    flex-direction: row;
+  }
+
+  .footer_Location,
+  .footer_Time {
+    text-align: left;
   }
 }
 
