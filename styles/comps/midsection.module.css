@@ -1,0 +1,63 @@
+.midSection {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.midSection:first-child {
+  margin-bottom: 5rem;
+}
+
+.midSection__Text__SubHeader {
+  font-weight: var(--fw-tri);
+  font-size: var(--fs-four);
+  margin-bottom: 0.5em;
+
+  text-align: center;
+  /* position: relative; */
+}
+
+.midSection__Text__SubHeader::before {
+  content: "O ------------";
+  font-size: 0.65rem;
+  display: block;
+
+  color: var(--col-acc-sec);
+}
+
+.midSection__Text__Description {
+  text-align: center;
+}
+
+.ImgCon {
+  width: 100%;
+  position: relative;
+}
+
+@media screen and (min-width: 50rem) {
+  .midSection {
+    flex-direction: row;
+    width: 50%;
+  }
+
+  .midSection:first-child {
+    margin-bottom: 10rem;
+  }
+
+  .midSection__Text__SubHeader {
+    font-size: var(--fs-tri);
+  }
+
+  .midSection__Text__SubHeader::before {
+    text-align: left;
+  }
+
+  .midSection__Text__SubHeader,
+  .midSection__Text__Description {
+    text-align: left;
+  }
+
+  .switched {
+    order: 1;
+  }
+}
