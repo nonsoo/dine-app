@@ -6,6 +6,15 @@
   padding: 1.25em;
 }
 
+.wrapper {
+  display: flex;
+}
+
+.header_ImgCon {
+  position: relative;
+  width: 100%;
+}
+
 .header_title {
   font-weight: var(--fw-tri);
   font-size: var(--fs-four);

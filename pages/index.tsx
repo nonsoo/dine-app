@@ -1,4 +1,4 @@
-import type { NextPage } from "next";
+import type { NextPage, GetStaticProps } from "next";
 import Image from "next/image";
 
 import styles from "../styles/Home.module.css";
@@ -9,6 +9,7 @@ import FoodPrep from "../public/imgs/foodPrep.webp";
 import Salmon from "../public/imgs/salmon.webp";
 import Mignon from "../public/imgs/mignon.webp";
 import Mousse from "../public/imgs/mousse.webp";
+import Pasta from "../public/imgs/pasta.webp";
 
 import HeadMeta from "../Components/HeadComp/HeadMeta";
 import Btn from "../Components/btn";
@@ -65,21 +66,18 @@ const Home: NextPage = () => {
       <HeadMeta title="Dine" description="This is the dine app home page" />
 
       <header className={styles.header}>
-        <div className={styles.wrapper}>
-          <p className={styles.header_title}>dine</p>
-
-          <section className={styles.header_text}>
-            <p className={styles.header_text_subTitle}>
-              Exquisite dining <br />
-              since 1989
-            </p>
-            <p className={styles.header_text_description}>
-              Experience our seasonal menu in beautiful country surroundings.
-              Eat the freshest produce from the comfort of our farmhouse.
-            </p>
-            <Btn btnName="Book a Table" exCSS={styles.headerBtn} />
-          </section>
-        </div>
+        <p className={styles.header_title}>dine</p>
+        <section className={styles.header_text}>
+          <p className={styles.header_text_subTitle}>
+            Exquisite dining <br />
+            since 1989
+          </p>
+          <p className={styles.header_text_description}>
+            Experience our seasonal menu in beautiful country surroundings. Eat
+            the freshest produce from the comfort of our farmhouse.
+          </p>
+          <Btn btnName="Book a Table" exCSS={styles.headerBtn} />
+        </section>
       </header>
 
       <main className="mainC">
