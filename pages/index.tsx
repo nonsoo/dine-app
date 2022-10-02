@@ -1,4 +1,4 @@
-import type { NextPage, GetStaticProps } from "next";
+import type { NextPage } from "next";
 import Image from "next/image";
 
 import styles from "../styles/Home.module.css";
@@ -78,6 +78,10 @@ const Home: NextPage = () => {
           </p>
           <Btn btnName="Book a Table" exCSS={styles.headerBtn} />
         </section>
+
+        <div className={styles.header_ImgCon}>
+          <Image src={Pasta} alt="pasta" layout="fill" objectFit="cover" />
+        </div>
       </header>
 
       <main className="mainC">
