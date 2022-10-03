@@ -3,7 +3,6 @@
 
   min-height: 60vh;
   min-width: 100vw;
-  padding: 1.25em;
 
   display: grid;
   grid-template-columns: minmax(200px, 1fr);
@@ -23,6 +22,7 @@
   font-size: var(--fs-four);
   color: var(--col-text-tri);
   text-align: center;
+  padding-left: 1em;
 }
 
 .header_text {
@@ -30,6 +30,7 @@
   color: var(--col-text-tri);
 
   margin-top: 1.75em;
+  padding: 4em;
 
   display: flex;
   flex-direction: column;
@@ -195,13 +196,12 @@
 
 @media screen and (min-width: 50rem) {
   .header {
-    min-height: 0vh;
     grid-template-columns: minmax(200px, 1fr) 1fr;
   }
 
   .header_ImgCon {
     grid-column: 2/3;
-    grid-row: 1 / span 2;
+    grid-row: 1 / span 3;
   }
 
   .header_title,
