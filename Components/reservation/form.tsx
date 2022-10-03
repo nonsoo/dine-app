@@ -37,8 +37,12 @@ const FormRes: FC = () => {
     }
   };
 
+  const onSubmit = (e: any) => {
+    e.PreventDefault();
+  };
+
   return (
-    <form className={styles.ReservationForm}>
+    <form className={styles.ReservationForm} onSubmit={onSubmit}>
       <input
         type="text"
         className={styles.ReservationForm__Name}
