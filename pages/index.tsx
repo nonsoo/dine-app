@@ -4,62 +4,15 @@ import { useRouter } from "next/router";
 
 import styles from "../styles/Home.module.css";
 
-import farmImg from "../public/imgs/farm.webp";
+import { info, sampleHighlightInfo } from "../utils/Constants/contantVariables";
+
 import GatheringImg from "../public/imgs/gathering.webp";
-import FoodPrep from "../public/imgs/foodPrep.webp";
-import Salmon from "../public/imgs/salmon.webp";
-import Mignon from "../public/imgs/mignon.webp";
-import Mousse from "../public/imgs/mousse.webp";
 import Pasta from "../public/imgs/pasta.webp";
 
 import HeadMeta from "../Components/HeadComp/HeadMeta";
 import Btn from "../Components/btn";
-
 import MidSection from "../Components/midSection";
-
 import SampleHighlight from "../Components/highlightSection/sampleHighlight";
-
-const info = [
-  {
-    id: 1,
-    subHeader: "Enjoyable place for all the family",
-    description: `Our relaxed surroundings make dining with us a great experience for
-          everyone. We can even arrange a tour of the farm before your meal.`,
-    imgTitle: farmImg,
-    switched: false,
-  },
-  {
-    id: 2,
-    subHeader: "The most locally sourced food",
-    description: `All ingredients come directly from our farm or local fishery. So you can be sure that you're eating the freshest, most sustainable food.`,
-    imgTitle: FoodPrep,
-    switched: true,
-  },
-];
-
-const sampleHighlightInfo = [
-  {
-    id: 1,
-    headerTitle: "seared salmon filet",
-    description:
-      "our locally sourced salmon served with a refreshing buckwheat summer salad.",
-    imgTitle: Salmon,
-  },
-  {
-    id: 2,
-    headerTitle: "Rosemary Filet Miganon",
-    description:
-      "Our prime beef served to your tase with a delicious choice of seasonal sides.",
-    imgTitle: Mignon,
-  },
-  {
-    id: 3,
-    headerTitle: "Summer Fruit Chocolate Mousse",
-    description:
-      "Creamy mousse combined with summer fruits and dark chocolate shavings.",
-    imgTitle: Mousse,
-  },
-];
 
 const Home: NextPage = () => {
   const router = useRouter();
