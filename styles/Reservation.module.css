@@ -14,13 +14,12 @@
 .header_Sub_Title,
 .header_Description {
   color: var(--col-text-tri);
+  text-align: center;
 }
 
 .header_Title {
   font-weight: var(--fw-tri);
   font-size: var(--fs-four);
-
-  text-align: left;
 }
 
 .header_Sub_Title {
@@ -31,7 +30,7 @@
 }
 
 .header_Description {
-  width: clamp(300px, 60%, 700px);
+  width: 100%;
   font-size: var(--fs-sec);
 }
 
@@ -39,5 +38,23 @@
   max-width: 600px;
 
   margin: 0 auto;
+
   padding: 0 1.25em;
+
+  translate: 0 -100px;
+  transition: 0.25s;
+}
+
+@media screen and (min-width: 50rem) {
+  .header_Title,
+  .header_Sub_Title,
+  .header_Description {
+    text-align: left;
+  }
+  .header_Description {
+    width: clamp(300px, 60%, 700px);
+  }
+  .FormContainer {
+    translate: 60% -100px;
+  }
 }
