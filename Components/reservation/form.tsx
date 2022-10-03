@@ -1,20 +1,21 @@
-import { FC, useState } from "react";
+import { FC, useState, useMemo } from "react";
 import { userReservation } from "../../utils/types/projectTypes";
 
 import styles from "../../styles/formRes.module.css";
 
 const FormRes: FC = () => {
-  const options = [
-    {
-      id: 1,
-      option: "AM",
-    },
-    {
-      id: 2,
-      option: "PM",
-    },
-  ];
-
+  const options = useMemo(() => {
+    return [
+      {
+        id: 1,
+        option: "AM",
+      },
+      {
+        id: 2,
+        option: "PM",
+      },
+    ];
+  }, []);
   const [reservation, setReservation] = useState<userReservation>({
     name: "",
     email: "",
