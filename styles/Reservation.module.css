@@ -42,7 +42,6 @@
   padding: 0 1.25em;
 
   translate: 0 -100px;
-  transition: 0.25s;
 }
 
 @media screen and (min-width: 50rem) {
@@ -53,8 +52,5 @@
   }
   .header_Description {
     width: clamp(300px, 60%, 700px);
-  }
-  .FormContainer {
-    translate: 60% -100px;
   }
 }
