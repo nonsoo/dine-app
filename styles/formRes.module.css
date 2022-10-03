@@ -1,0 +1,76 @@
+.ReservationForm {
+  margin-top: 3em;
+  padding: 2.25em;
+  background-color: var(--col-background-tri);
+
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+
+  width: 100%;
+}
+
+.ReservationForm__Name,
+.ReservationForm__Email,
+.date__DatePicker,
+.time__DatePicker {
+  padding: 0.55em;
+
+  border: none;
+  border-bottom: 1px solid var(--col-acc-sec);
+
+  font-size: var(--fs-sec);
+  font-weight: var(--fw-sec);
+  text-align: center;
+}
+
+.date,
+.time {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1em;
+}
+
+.date__Title,
+.time__Title {
+  flex: 2 1 100px;
+  font-weight: var(--fw-sec);
+  font-size: var(--fs-sec);
+}
+
+.date__DatePicker,
+.time__DatePicker {
+  width: 20%;
+}
+
+.numPeople {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0.55em;
+
+  border-bottom: 1px solid var(--col-acc-sec);
+}
+
+.numPeople__Measure {
+  font-weight: var(--fw-tri);
+  cursor: pointer;
+}
+
+.ReservationForm__submit {
+  border: none;
+  outline: 2px solid var(--col-background-prmy);
+
+  background-color: var(--col-background-sec);
+  color: var(--col-text-tri);
+
+  padding: 0.75em 3em;
+
+  font-size: var(--fs-sec);
+  font-weight: var(--fw-sec);
+  text-transform: uppercase;
+
+  cursor: pointer;
+}

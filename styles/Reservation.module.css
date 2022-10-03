@@ -1,0 +1,43 @@
+.header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../public/imgs/reservation.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  width: 100%;
+  min-height: 50vh;
+  max-height: 400px;
+  padding: 3em;
+}
+
+.header_Title,
+.header_Sub_Title,
+.header_Description {
+  color: var(--col-text-tri);
+}
+
+.header_Title {
+  font-weight: var(--fw-tri);
+  font-size: var(--fs-four);
+
+  text-align: left;
+}
+
+.header_Sub_Title {
+  font-size: var(--fs-four);
+  font-weight: var(--fw-sec);
+
+  margin-top: max(10vh, 2em);
+}
+
+.header_Description {
+  width: clamp(300px, 60%, 700px);
+  font-size: var(--fs-sec);
+}
+
+.FormContainer {
+  max-width: 600px;
+
+  margin: 0 auto;
+  padding: 0 1.25em;
+}

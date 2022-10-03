@@ -43,6 +43,7 @@ select {
 
   --col-background-prmy: hsl(0, 0%, 93%);
   --col-background-sec: hsl(0, 0%, 7%);
+  --col-background-tri: hsl(0, 0%, 100%);
 
   --col-acc-prmy: hsl(210, 13%, 94%);
   --col-acc-sec: hsl(27, 17%, 45%);
