@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 import styles from "../styles/Home.module.css";
 
@@ -61,6 +62,10 @@ const sampleHighlightInfo = [
 ];
 
 const Home: NextPage = () => {
+  const router = useRouter();
+  const onNavigate = () => {
+    router.push("/reservation");
+  };
   return (
     <>
       <HeadMeta title="Dine" description="This is the dine app home page" />
@@ -76,7 +81,11 @@ const Home: NextPage = () => {
             Experience our seasonal menu in beautiful country surroundings. Eat
             the freshest produce from the comfort of our farmhouse.
           </p>
-          <Btn btnName="Book a Table" exCSS={styles.headerBtn} />
+          <Btn
+            btnName="Book a Table"
+            exCSS={styles.headerBtn}
+            onToggle={() => onNavigate()}
+          />
         </section>
 
         <div className={styles.header_ImgCon}>
@@ -135,7 +144,11 @@ const Home: NextPage = () => {
               along for a special meal with your loved ones. We will provide a
               memorable experience for all.
             </p>
-            <Btn btnName="book table" exCSS={styles.gathering_Text_btn} />
+            <Btn
+              btnName="book table"
+              exCSS={styles.gathering_Text_btn}
+              onToggle={() => onNavigate()}
+            />
           </div>
           <div className={styles.gathering_Options}>
             <p className={styles.gathering_Options_optionText}>
@@ -148,7 +161,11 @@ const Home: NextPage = () => {
 
         <section className={styles.orderingSection}>
           <p className={styles.orderText}>Ready to make a reservation?</p>
-          <Btn btnName="book a table" exCSS={styles.order_Btn} />
+          <Btn
+            btnName="book a table"
+            exCSS={styles.order_Btn}
+            onToggle={() => onNavigate()}
+          />
         </section>
       </main>
 
