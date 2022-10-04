@@ -41,9 +41,7 @@ const FormRes: FC = () => {
 
   const onSubmit = async (e: any) => {
     e.preventDefault();
-    const resp = postData("/api/reservation", reservation);
-
-    // console.log(resp);
+    postData("/api/reservation", reservation);
   };
 
   return (
