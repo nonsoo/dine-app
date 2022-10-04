@@ -3,6 +3,8 @@ import { userReservation } from "../../utils/types/projectTypes";
 
 import styles from "../../styles/formRes.module.css";
 
+import postData from "../../utils/helpers/postData";
+
 const FormRes: FC = () => {
   const options = useMemo(() => {
     return [
@@ -37,8 +39,11 @@ const FormRes: FC = () => {
     }
   };
 
-  const onSubmit = (e: any) => {
-    e.PreventDefault();
+  const onSubmit = async (e: any) => {
+    e.preventDefault();
+    const resp = postData("/api/reservation", reservation);
+
+    // console.log(resp);
   };
 
   return (
@@ -129,11 +134,11 @@ const FormRes: FC = () => {
           className={styles.time__DatePicker}
           placeholder="00"
           maxLength={2}
-          value={reservation.time.hh}
+          value={reservation.time.mm}
           onChange={(e) =>
             setReservation({
               ...reservation,
-              time: { ...reservation.time, hh: e.target.value },
+              time: { ...reservation.time, mm: e.target.value },
             })
           }
           required
