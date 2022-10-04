@@ -10,7 +10,7 @@ const postData = async (route: string, body: any) => {
 
   const resParse = await response.json();
 
-  return resParse;
+  return { resParse, status: response.status };
 };
 
 export default postData;

@@ -26,6 +26,8 @@ const FormRes: FC = () => {
     numPeople: 1,
   });
 
+  const [resStatus, setResStatus] = useState<boolean>(false);
+
   const onIncrement = () => {
     setReservation((prev) => {
       return { ...prev, numPeople: prev.numPeople + 1 };
@@ -41,7 +43,11 @@ const FormRes: FC = () => {
 
   const onSubmit = async (e: any) => {
     e.preventDefault();
-    postData("/api/reservation", reservation);
+    const responseAPI = await postData("/api/reservation", reservation);
+
+    if (responseAPI.status === 200) {
+      setResStatus(true);
+    }
   };
 
   return (
