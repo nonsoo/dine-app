@@ -11,8 +11,11 @@ export default async function handler(
 ) {
   const { name, email, date, time, numPeople } = req.body;
   if (req.method === "POST" && name && email && date && time && numPeople) {
-    if (isDate(new Date(`${date.mm}/${date.dd}/${date.yy}`))) {
-      // createReservation(req.body);
+    const dateCheck = new Date(
+      `${date.mm}/${date.dd}/${date.yy} ${time.hh}:${time.mm} ${time.hrType}`
+    );
+    if (isDate(dateCheck)) {
+      createReservation(req.body);
       res.status(200).json({ word: "success" });
     }
   } else {
